@@ -127,6 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\errDisplayMessageController.cs" />
+    <Compile Include="Controllers\grfBarChartController.cs" />
     <Compile Include="Controllers\logEventsController.cs" />
     <Compile Include="Controllers\logQueriesController.cs" />
     <Compile Include="Controllers\masGeneralInputController.cs" />
