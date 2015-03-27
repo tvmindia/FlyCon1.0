@@ -126,6 +126,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\errDisplayMessageController.cs" />
+    <Compile Include="Controllers\logEventsController.cs" />
+    <Compile Include="Controllers\logQueriesController.cs" />
+    <Compile Include="Controllers\masGeneralInputController.cs" />
+    <Compile Include="Controllers\masPersonnelController.cs" />
+    <Compile Include="Controllers\punMainInputController.cs" />
+    <Compile Include="Controllers\secUserManagementController.cs" />
+    <Compile Include="Controllers\sysCategoryManagementController.cs" />
+    <Compile Include="Controllers\trkGeneralInputController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,7 +228,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\Landing\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
