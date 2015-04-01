@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "ProcessP";
+}
+
+@*@model MicrosoftCharts.Models.ChartModel*@
+
+@{
+    //ViewBag.Title = "Index";
+    @*<% var myArray = (string[])ViewData["passedArray"]; %>*@
+
+
+}
+
+@Html.Action("BarChartPartial")
+
+<body>
+
+     
+    <div style="width:10% ; position:center; padding-left:500px; padding-right:0px;" >
+        <canvas id="canvas" height="100" width="200"></canvas>
+        <div id="legend"></div>
+    </div>
+    <div style="width: 20%">
+        <canvas id="barchart" width="400" height="400"></canvas>
+        <div id="pieLegend"></div>
+    </div>
+<script>
+    
+    window.onload = function () {
+        var Xvalue = '@ViewBag.xaxis';
+        //var ab = da.split(',');
+        var Yvalue = '@ViewBag.yaxis';
+        //var cd = ya.split(',');
+        //debugger;
+        //CallChart(id, ab,cd);
+        CallChart(1, Xvalue, Yvalue);
+        var Xvalue1 = '@ViewBag.Xaxis';
+        //var ab = da.split(',');
+        var Yvalue1 = '@ViewBag.Yaxis';
+        CallChartGraph(1, Xvalue1, Yvalue1);
+        //document.getElementById("legendDiv").innerHTML = myLineChart.generateLegend();
+           
+    }
+
+
+
+    </script>
+   
+</body>

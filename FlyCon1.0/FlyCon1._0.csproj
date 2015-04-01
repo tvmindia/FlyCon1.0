@@ -126,7 +126,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CustomeGraphController.cs" />
     <Compile Include="Controllers\errDisplayMessageController.cs" />
+    <Compile Include="Controllers\GraphController.cs" />
     <Compile Include="Controllers\grfBarChartController.cs" />
     <Compile Include="Controllers\logEventsController.cs" />
     <Compile Include="Controllers\logQueriesController.cs" />
@@ -136,12 +138,27 @@
     <Compile Include="Controllers\secUserManagementController.cs" />
     <Compile Include="Controllers\sysCategoryManagementController.cs" />
     <Compile Include="Controllers\trkGeneralInputController.cs" />
+    <Compile Include="DAL\ChartData.cs" />
+    <Compile Include="DAL\Connection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChartModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChartScript\Chart.js" />
+    <Content Include="ChartScript\Chart.min.js" />
+    <Content Include="ChartScript\MSchartData.js" />
+    <Content Include="ChartScript\piescript.js" />
+    <Content Include="ChartScript\RGraph.common.core.js" />
+    <Content Include="ChartScript\RGraph.common.dynamic.js" />
+    <Content Include="ChartScript\RGraph.common.effects.js" />
+    <Content Include="ChartScript\RGraph.common.key.js" />
+    <Content Include="ChartScript\RGraph.common.tooltips.js" />
+    <Content Include="ChartScript\RGraph.drawing.rect.js" />
+    <Content Include="ChartScript\RGraph.pie.js" />
+    <Content Include="ChartScript\TwoColumnChartScript.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -225,11 +242,23 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CustomeGraph\BarChartPartial.cshtml" />
+    <Content Include="Views\CustomeGraph\Index.cshtml" />
+    <Content Include="Views\CustomeGraph\Pie.cshtml" />
+    <Content Include="Views\CustomeGraph\PieChartPartial.cshtml" />
+    <Content Include="Views\CustomeGraph\ProcessP.cshtml" />
+    <Content Include="Views\CustomeGraph\TwoColoumnBarChart.cshtml" />
+    <Content Include="Views\CustomeGraph\TwoColumnBarChartPartial.cshtml" />
+    <Content Include="Views\Graph\BarChartPartial.cshtml" />
+    <Content Include="Views\Graph\Index.cshtml" />
+    <Content Include="Views\Graph\Pie.cshtml" />
+    <Content Include="Views\Graph\PieChartPartial.cshtml" />
+    <Content Include="Views\Graph\TwoColoumnBarChart.cshtml" />
+    <Content Include="Views\Graph\TwoColumnBarChartPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\Landing\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

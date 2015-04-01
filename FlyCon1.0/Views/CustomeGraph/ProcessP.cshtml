@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "ProcessP";
+}
+
+@*@model MicrosoftCharts.Models.ChartModel*@
+
+@{
+    //ViewBag.Title = "Index";
+    @*<% var myArray = (string[])ViewData["passedArray"]; %>*@
+
+
+}
+<h2>Index</h2>
+<head>
+    <title>Bar Chart</title>
+    <script src="~/Scripts/Chart.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+
+    <script src="~/MSChartScript/MSchartData.js"></script>
+</head>
+<body>
+
+
+    <div style="width: 50%">
+        <canvas id="canvas" height="450" width="600"></canvas>
+        @*<div id="legendDiv"></div>*@
+    </div>
+
+    @*@foreach(var item in ViewData.Model)
+        {
+            var a = @item["Name"];
+
+        }*@
+
+
+    @*@foreach(var item in (string[])ViewData["passedArray"])
+        {
+            //var addresses = new Array(
+            // for(int i=0;i<item.Length;i++)
+            // {
+            //     addresses[i]=ViewData.Add;
+            //     addresses[i]++;
+            // }
+        }*@
+
+    <script>
+
+
+    @*@ ArrayList myArrayList = new ArrayList();
+
+        @foreach (DataRow dataRow in Model Table.Rows)
+            myArrayList.Add(string.Join(";", dataRow.ItemArray.Select(item => item.ToString())));*@
+    //alert(1);
+    //var myArrayList = ViewData["myArrayList"];
+    //myArrayList[1];
+
+    //var myArray = new Array((string[])ViewData["passedArray"] %>';
+
+       // var tempArray=  @*@Html.Raw(ViewData["myArrayList"]);*@
+    //var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+
+
+
+
+    //var a=["January","February","March","April","May","June","July"];
+
+
+
+
+    window.onload = function () {
+        var da = '@ViewBag.xaxis';
+        //var ab = da.split(',');
+        var ya = '@ViewBag.yaxis';
+            //var cd = ya.split(',');
+            //debugger;
+            //CallChart(id, ab,cd);
+            CallChart(1, da, ya);
+
+            //document.getElementById("legendDiv").innerHTML = myLineChart.generateLegend();
+        }
+
+
+
+    </script>
+</body>
