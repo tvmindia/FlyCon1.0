@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ProcessP";
+}
+
+@Html.Action("BarChartPartial")
+
+@*@{Html.RenderAction("BarChartPartial", "MSChartArrayController");}*@
+
+
+<body>
+
+
+    <div style="width: 50%">
+        <canvas id="canvas" height="450" width="600"></canvas>
+        <div id="legend"></div>
+    </div>
+
+
+    <script>
+
+
+
+
+
+    window.onload = function () {
+        var Xvalues = '@ViewBag.xaxis';
+
+        var Yvalues = '@ViewBag.yaxis';
+
+        CallChart(1, Xvalues, Yvalues);
+
+    }
+
+
+
+    </script>
+</body>
+

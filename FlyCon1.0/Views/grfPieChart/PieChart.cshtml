@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "PieChart";
+}
+
+@Html.Action("PieChartPartial")
+
+<body>
+    <canvas id="cvs" width="400" height="300">[No canvas support]</canvas>
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            var Xvalue = '@ViewBag.xaxis';
+            //var ab = da.split(',');
+            var Yvalue = '@ViewBag.yaxis';
+          
+            CallChartPie(1, Xvalue, Yvalue);
+        })
+
+
+    </script>
+
+</body>
