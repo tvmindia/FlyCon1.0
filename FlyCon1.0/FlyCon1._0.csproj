@@ -139,12 +139,15 @@
     <Compile Include="Controllers\secUserManagementController.cs" />
     <Compile Include="Controllers\sysCategoryManagementController.cs" />
     <Compile Include="Controllers\trkGeneralInputController.cs" />
+    <Compile Include="Controllers\trkLoginController.cs" />
     <Compile Include="DAL\Connection.cs" />
     <Compile Include="DAL\grfGraphDataAccess.cs" />
+    <Compile Include="DAL\trkLoginDataAccess.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\grfGraphModel.cs" />
+    <Compile Include="Models\trkLoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +341,10 @@
     <Content Include="Views\lanHomePageDesign\MainPage.cshtml" />
     <Content Include="Views\lanHomePageDesign\MainPageIcons.cshtml" />
     <Content Include="Views\lanHomePageDesign\MultiAccordion.cshtml" />
+    <Content Include="Views\trkLogin\Login.cshtml" />
+    <Content Include="Views\trkLogin\Index.cshtml" />
+    <Content Include="Views\trkLogin\MainPage.cshtml" />
+    <Content Include="Views\trkLogin\MainPageIcons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
