@@ -15,7 +15,7 @@ namespace FlyCon1._0.Models
         public string ProjNo
         {
             get;
-            set;
+            set;  
         }
         public string ProjPreference
         {
@@ -25,4 +25,3 @@ namespace FlyCon1._0.Models
           public IEnumerable<dynamic> Rows { get; set; }
   }
     }
-}
