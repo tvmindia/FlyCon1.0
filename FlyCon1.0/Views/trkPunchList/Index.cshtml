@@ -1,0 +1,42 @@
+﻿@model IEnumerable<FlyCon1._0.Models.trkPunchListModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Master.cshtml";
+ 
+}
+
+<h2>Index</h2>
+
+<body>
+@{
+    var grid = new WebGrid(source: Model);
+    @grid.GetHtml(mode: WebGridPagerModes.All,
+    htmlAttributes: new { id = "grid" },
+    tableStyle: "table",
+    headerStyle: "header",
+    footerStyle: "grid-footer",
+    fillEmptyRows: true,
+    firstText: "<< First",
+    previousText: "< Prev",
+    nextText: "Next >",
+    lastText: "Last >>",
+
+
+columns: grid.Columns(
+
+                              grid.Column(columnName: "ProjNo", header: "Project No"),
+                              grid.Column(columnName: "IDNo", header: "IDNo"),
+                              grid.Column(columnName: "LinkIDNo", header: "LinkIDNo"),
+                              grid.Column(columnName: "PunchType", header: "Punch Type"),
+                              grid.Column(columnName: "OpenBy", header: "Open By"),
+                              grid.Column(columnName: "OpenDt", header: "Open Date"),
+                              grid.Column(columnName: "EnteredBy", header: "Entered By"),
+                              grid.Column(columnName: "EnteredDt", header: "Entered Date"),
+                              grid.Column(columnName: "Plant", header: "Plant"),
+                              grid.Column(columnName: "Area", header: "Area"),
+                              grid.Column(columnName: "Location", header: "Location"),
+                              grid.Column(columnName: "Unit", header: "Unit")
+                             
+                              ))
+}
+</body>
