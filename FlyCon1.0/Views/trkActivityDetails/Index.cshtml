@@ -1,0 +1,245 @@
+﻿@model FlyCon1._0.Models.trkActivityDetailsModel
+@{
+    ViewBag.Title = "Index";
+ 
+}
+
+<h2>Index</h2>
+ <head>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+
+<link href="~/Content/themes/MultiAccordion.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.11.2.min.js"></script>
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>*@
+<script>
+    function btnSave(id) {
+        //alert(1);
+        $('.accordion > dd').show();
+    }
+
+</script>
+
+
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        //Hide all panels
+        var allPanels = $('.accordion > dd').hide();
+        $('[data-toggle="popover"]').popover();
+        $('.accordion > dd:first-of-type').show();
+        //Add active class to first panel
+        $('.accordion > dt:first-of-type').addClass('accordion-active');
+        //Handle click function
+        jQuery('.accordion > dt').on('click', function () {
+
+            //this clicked panel
+            $this = $(this);
+            //the target panel content
+            $target = $this.next();
+            //Only toggle non-displayed
+            if (!$this.hasClass('accordion-active')) {
+
+                $this.addClass('accordion-active');
+
+                //slide down target panel
+                $target.addClass('active').slideDown();
+
+            }
+
+            else {
+
+
+                $target.slideUp();  
+                $this.removeClass('accordion-active');
+
+
+
+            }
+            return false;
+        });
+  
+    })
+    (jQuery);
+</script>
+
+
+
+
+   
+</head>
+
+
+    <body style="height:200px; background:transparent">
+        <dl class="accordion">
+            <dt id="Panel1">Panel 1</dt>
+            <dd style="color:green;">
+                <table class="accordion-section-table" cellspacing="0" cellpadding="0">
+                    <tbody class="label">
+
+                        <tr>
+
+                        <tr>
+                            <td>
+
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_id"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_description"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_startdate"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_enddate"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @*<div class="well">
+                                    <div class="container">
+
+                                        <div id="pop" class="modal hide fade in" style="display: none;" >
+                                            <div class="modal-header">
+                                                <a class="close" data-dismiss="modal">×</a><br />
+
+                                            </div>
+                                            <div class="modal-body" >
+
+                                                    <iframe src='@Url.Action("MouseHover", "trkActivityDetails")' width="100%" height="315"
+                                                            frameborder="0" allowfullscreen></iframe>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="btn btn-small" data-dismiss="modal">Close</a>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <div onclick="dispalyPopup('pop')">@Model.ds.Tables[0].Rows[0]["user_name"].ToString()</div>
+                                            <a data-toggle="modal" href="#pop" class="btn btn-primary btn-small">55y6</a>
+                                        </p>
+                                    </div>
+                                </div>*@
+
+                                <div>
+                                    <button type="button" class="btn btn-primary" data-toggle="popover" data-placement="right" title="Popover title" data-content="Default popover">@Model.ds.Tables[0].Rows[0]["user_name"].ToString()</button>
+                                </div>
+
+
+
+
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+
+                </table>
+            </dd>
+            <dt id="Panel2">Panel 2</dt>
+            <dd>
+                <table class="accordion-section-table" cellspacing="0" cellpadding="0">
+                    <tbody class="label">
+                        <tr>
+
+                        <tr>
+                            <td>
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_budget"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_rate"].ToString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                @Html.Label(@Model.ds.Tables[0].Rows[0]["det_ratenorm"].ToString())
+                            </td>
+                        </tr>
+
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+            </dd>
+            <dt id="Panel3">Panel 3</dt>
+            <dd>
+                <table class="accordion-section-table" cellspacing="0" cellpadding="0">
+                    <tbody class="label">
+                        <tr>
+                            <td><label id=lblbox1>aa</label></td>
+                            <td><input></td>
+                            <td width="10px">&nbsp;</td>
+                            <td><label>ab</label></td>
+                            <td><input></td>
+                        </tr>
+                        <tr>
+                            <td><label>ac</label></td>
+                            <td><input></td>
+                            <td width="10px">&nbsp;</td>
+                            <td><label>ad</label></td>
+                            <td><input></td>
+                        </tr>
+                        <tr>
+                            <td><label>ae</label></td>
+                            <td><input></td>
+                            <td width="10px">&nbsp;</td>
+                            <td><label>af</label></td>
+                            <td><input></td>
+                        </tr>
+                        <tr>
+                            <td><label>ar</label></td>
+                            <td><input></td>
+                            <td width="10px">&nbsp;</td>
+                            <td><label>aw</label></td>
+                            <td><input></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+
+                            </td>
+
+                        </tr>
+                        <tr style="column-span:4;" align="left">
+                            <td>
+                                <div class="A">
+                                    <button type="button" class="btn" data-toggle="tooltip" data-original-title="Default tooltip" title="sdfsdf" id="aButton">A</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+        </dl>
+
+        <script src="~/Scripts/bootstrap.js"></script>
+         
+    </body>

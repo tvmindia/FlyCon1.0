@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+@*<script src="~/Scripts/jquery.min.js"></script>*@
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+
+@*<script src="~/Scripts/bootstrap.js"></script>*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+
+<body>
+
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="popover" data-placement="right" title="Popover title" data-content="Default popover">Popover on top</button>
+    </div>
+</body>

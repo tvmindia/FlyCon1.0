@@ -13,7 +13,7 @@ namespace MicrosoftCharts.DAL
         public static SqlConnection GetConnection()
         {
 
-            String strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
+            String strcon = ConfigurationManager.ConnectionStrings["dbCon"].ToString();
             SqlConnection con = new SqlConnection(strcon);
             return con;
         }

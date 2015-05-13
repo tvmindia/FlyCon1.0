@@ -1,0 +1,28 @@
+﻿@model FlyCon1._0.Models.trkActivityDetailsModel
+
+@{
+    ViewBag.Title = "MouseHover";
+}
+
+<h2>MouseHover</h2>
+<body style="height:200px; background:transparent">
+    
+            <table class="accordion-section-table" cellspacing="0" cellpadding="0">
+                <tbody class="label">
+
+                    <tr>
+
+                    <tr>
+                        <td>
+
+                            @Html.Label(@Model.ds.Tables[0].Rows[0]["user_id"].ToString())
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.Label(@Model.ds.Tables[0].Rows[0]["user_department"].ToString())
+                        </td>
+                    </tr>
+</tbody>
+</table>
+</body>
